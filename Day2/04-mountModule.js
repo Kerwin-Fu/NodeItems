@@ -8,3 +8,4 @@ const b = 8080
  const sub = calc.sumSub(80,8)
 
  console.log(plus,sub,a,b,calc.a,calc.b);
+
