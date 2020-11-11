@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-11-11 11:31:29
- * @LastEditTime: 2020-11-11 11:48:51
+ * @LastEditTime: 2020-11-11 16:06:38
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \day5\index.js
@@ -18,9 +18,10 @@ const db = mysql.createPool({
 });
 
 // select * from users // 查询 users 表里面的内容
+const user = { username: '我爱汪帆', password: 'L某' }
 const sql = `select * from users`;
-const str = `insert into users (username,password) values('汪帆你鞭我好吗','69岁老人')`
-db.query(sql, (err, results) => {
+const str = `insert into users SET ?`
+db.query(sql,user, (err, results) => {
     if (err) return console.log(err);
     console.log(results);
 });
