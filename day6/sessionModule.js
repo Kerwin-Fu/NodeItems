@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-11-12 11:13:14
- * @LastEditTime: 2020-11-12 13:49:07
+ * @LastEditTime: 2020-11-12 15:08:20
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \day6\sessionModule.js
@@ -42,7 +42,7 @@ app.use(session({
     resave: false,
     saveUninitialized: true,
 }))
-// app.use(express.urlencoded({ extended: false }))
+app.use(express.urlencoded({ extended: false }))
 
 app.post('/api/login', (req, res) => {
     console.log(req.body);
